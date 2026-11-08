@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class FairyItem : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] int healAmount = 20;
 
-    // Update is called once per frame
-    void Update()
+    public void DoHeal()
     {
-        
+        // Add healAmount to player's health
+        // Destroy the item
     }
 }
