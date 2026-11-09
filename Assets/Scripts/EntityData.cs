@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class EntityData : MonoBehaviour
 {
-    [SerializeField] int health_ = 40;
+    [SerializeField] protected int health_ = 40;
     [SerializeField] const int maxHealth = 40;
 
-    public void SetHealth(int health)
+    public virtual void SetHealth(int health)
     {
         if (health > maxHealth)
             health_ = maxHealth;
