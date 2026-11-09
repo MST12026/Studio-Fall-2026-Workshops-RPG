@@ -4,10 +4,11 @@ public class RoomManager : MonoBehaviour
 {
     public static RoomManager instance_;
     Room activeRoom;
+    public PlayerData player_;
 
-
-    void Start()
+    void Awake()
     {
+        player_ = FindAnyObjectByType<PlayerData>();
         instance_ = this;
     }
 

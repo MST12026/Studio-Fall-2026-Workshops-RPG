@@ -1,19 +1,17 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerData : MonoBehaviour
+public class PlayerData : EntityData
 {
-    private int playerHealth = 40;
-    private const int maxHealth = 40;
+    int mana_;
 
-    public void SetHealth(int health)
+    void Start()
     {
-        if (health > maxHealth)
-            playerHealth = 40;
-        else if (health < 0)
-            playerHealth = 0;
-        else
-            playerHealth = health;
+        
     }
 
-    public int GetHealth => playerHealth;
+    protected override void HandleDeath()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 }

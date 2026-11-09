@@ -25,10 +25,9 @@ public class Room : MonoBehaviour
         Debug.Log(roomEnemies.Count);
 
 
-        PlayerData p = FindAnyObjectByType<PlayerData>();
+        PlayerData p = RoomManager.instance_.player_;
         if (roomBounds.Contains(p.transform.position)) {
             RoomManager.instance_.ForceSetActiveRoom(this);
-            Debug.Log(this);
         }
         else
         {

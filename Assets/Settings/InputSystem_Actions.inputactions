@@ -17,9 +17,19 @@
                     "priority": 0
                 },
                 {
-                    "name": "Heal",
+                    "name": "Use Item",
                     "type": "Button",
                     "id": "82f26970-97ab-4687-9a42-08f0282a5426",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "bb4450b4-c4f5-4d40-89d6-5a67c9ad7d22",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -167,7 +177,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Heal",
+                    "action": "Use Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cdbac0e5-d63a-4097-8235-0d258df083d7",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
