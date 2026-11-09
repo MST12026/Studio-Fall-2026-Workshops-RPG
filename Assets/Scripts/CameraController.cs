@@ -24,7 +24,20 @@ public class CameraController : MonoBehaviour
         maxPos.z = -1;
     }
 
-
+    public void FocusRoomFast(Bounds b)
+    {
+        minPos = b.center;
+        maxPos = b.center;
+        minPos.z = -1;
+        maxPos.z = -1; 
+        Vector3 boundary = new Vector3
+            (
+                Mathf.Clamp(targetPos.x, minPos.x, maxPos.x),
+                Mathf.Clamp(targetPos.y, minPos.y, maxPos.y),
+                Mathf.Clamp(targetPos.z, minPos.z, maxPos.z)
+        );
+        transform.position = boundary;
+    }
 
     private void LateUpdate()
     {

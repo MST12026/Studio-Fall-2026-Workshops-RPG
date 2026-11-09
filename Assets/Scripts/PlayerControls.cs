@@ -13,16 +13,20 @@ public class PlayerControls : MonoBehaviour
 
 
     [SerializeField] float speed = 4f;
-    [SerializeField] EntityData playerData;
     [SerializeField] Attack attack;
 
     Vector2 facingDirection;
+    public static PlayerControls playerInstance;
     bool cooldown;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        playerInstance = this;
+    }
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();    
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
