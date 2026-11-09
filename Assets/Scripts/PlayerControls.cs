@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         Vector2 moveDir = context.action.ReadValue<Vector2>();
-        Debug.Log(moveDir);
 
         rb.linearVelocity = speed * moveDir;
     }
