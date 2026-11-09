@@ -9,6 +9,23 @@ public class CameraController : MonoBehaviour
 
     public Vector3 minPos, maxPos;
 
+    public static CameraController instance_;
+
+    private void Start()
+    {
+        instance_ = this;
+    }
+
+    public void FocusRoom(Bounds b)
+    {
+        minPos = b.center;
+        maxPos = b.center;
+        minPos.z = -1;
+        maxPos.z = -1;
+    }
+
+
+
     private void LateUpdate()
     {
         if (transform.position != player.position)

@@ -9,6 +9,8 @@ public class Room : MonoBehaviour
     [SerializeField] Bounds roomBounds;
     List<Enemy> roomEnemies = new List<Enemy>();
 
+    
+
 
     private void Start()
     { 
@@ -38,6 +40,7 @@ public class Room : MonoBehaviour
     public void RequestActiveRoom()
     {
         RoomManager.instance_.setActiveRoom(this);
+        CameraController.instance_.FocusRoom(roomBounds);
 
         foreach (Enemy enemy in roomEnemies)
         {
