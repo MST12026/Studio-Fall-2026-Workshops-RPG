@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] Attack attack;
     [SerializeField] int atkDmg;
     [SerializeField] float atkCooldown;
+    [SerializeField] float atkRange;
 
     Vector3 initialPos;
     bool cooldown;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
         entityData_ = GetComponent<EntityData>();
         pathfinder_ = GetComponent<AIPath>();
         initialPos = transform.position;
+        pathfinder_.endReachedDistance = atkRange;
     }
 
     public void resetPosition()
@@ -31,14 +33,17 @@ public class Enemy : MonoBehaviour
     {
         if (pathfinder_.reachedDestination)
         {
-            Vector3 pt = PlayerControls.playerInstance.gameObject.transform.position;
-            Vector2 direction = (Vector2)pt - (Vector2)transform.position;
-            float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) - 90;
-            Quaternion facingAngle = Quaternion.Euler(0, 0, angle);
-            Attack a = Instantiate(attack, transform.position, facingAngle);
-            a.SetDamage(atkDmg, gameObject);
-            cooldown = true;
-            Invoke("ResetCooldown", atkCooldown);
+            if (!cooldown)
+            {
+                Vector3 pt = PlayerControls.playerInstance.gameObject.transform.position;
+                Vector2 direction = (Vector2)pt - (Vector2)transform.position;
+                float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) - 90;
+                Quaternion facingAngle = Quaternion.Euler(0, 0, angle);
+                Attack a = Instantiate(attack, transform.position, facingAngle);
+                a.SetDamage(atkDmg, gameObject);
+                cooldown = true;
+                Invoke("ResetCooldown", atkCooldown);
+            }
         }
     }
 
