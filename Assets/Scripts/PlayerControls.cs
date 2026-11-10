@@ -43,11 +43,12 @@ public class PlayerControls : MonoBehaviour
         rb.linearVelocity = speed * facingDirection;
     }
 
+    // TODO: Link up player input with using the fairy item
     public void OnHeal(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        // Try to find a fairy item in the player's items list
-        // If found call the DoHeal() function from FairyItem.cs
+        // Try to find a fairy item that is a child of the player
+        // If found call the relevant function from FairyItem.cs
     }
 
     public void OnAttack(InputAction.CallbackContext context)
