@@ -3,7 +3,7 @@ using UnityEngine;
 public class EntityData : MonoBehaviour
 {
     [SerializeField] protected int health_ = 40;
-    [SerializeField] const int maxHealth = 40;
+    [SerializeField] protected const int maxHealth = 40;
 
     public virtual void SetHealth(int health)
     {
@@ -15,7 +15,7 @@ public class EntityData : MonoBehaviour
             health_ = health;
     }
 
-    public void TryDealDamage(int damage)
+    public virtual void TryDealDamage(int damage)
     {
         health_ -= damage;
         if (health_ <= 0)

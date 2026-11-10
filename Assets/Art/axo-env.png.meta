@@ -621,79 +621,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: axo-env_23
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 106
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb6ae64e07d75b246abcd88352ac37d1
-      internalID: 1224120296
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: axo-env_24
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 106
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 455135f06c191764babf73141d957c53
-      internalID: -2089592276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: axo-env_25
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 76
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acf6b3f293394c042b16d96f66a5fddc
-      internalID: 1168338511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: axo-env_26
       rect:
         serializedVersion: 2
-        x: 226
+        x: 196
         y: 76
-        width: 30
-        height: 30
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateHealthDisplay(int health)
     {
+        Debug.Log("uhealt");
         int remainingHealth = Mathf.Max(health, 0);
         for (int i = 0; i < hearts.Length; i++)
         {

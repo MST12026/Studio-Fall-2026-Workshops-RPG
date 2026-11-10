@@ -22,6 +22,11 @@ public class Enemy : MonoBehaviour
         pathfinder_.endReachedDistance = atkRange;
     }
 
+    private void Start()
+    {
+        AIDestinationSetter dest = GetComponent<AIDestinationSetter>();
+        dest.target = PlayerControls.playerInstance.gameObject.transform;
+    }
     public void resetPosition()
     {
         entityData_.SetHealth(int.MaxValue);
@@ -31,7 +36,7 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (pathfinder_.reachedDestination)
+        if (pathfinder_.reachedEndOfPath)
         {
             if (!cooldown)
             {

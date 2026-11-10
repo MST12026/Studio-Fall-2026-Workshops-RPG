@@ -9,7 +9,7 @@ public class PlayerData : EntityData
 
     void Start()
     {
-        
+        UIManager.instance_.UpdateHealthDisplay(health_);
     }
 
     public override void SetHealth(int health)
@@ -17,6 +17,13 @@ public class PlayerData : EntityData
         base.SetHealth(health);
         UIManager.instance_.UpdateHealthDisplay(health_);
     }
+
+    public override void TryDealDamage(int damage)
+    {
+        base.TryDealDamage(damage);
+        UIManager.instance_.UpdateHealthDisplay(health_);
+    }
+
 
     protected override void HandleDeath()
     {
