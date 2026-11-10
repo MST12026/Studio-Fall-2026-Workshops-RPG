@@ -51,6 +51,13 @@ public class PlayerControls : MonoBehaviour
         // If found call the relevant function from FairyItem.cs
     }
 
+    public void OnBomb(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        // Try to find a bomb item that is a child of the player
+        // If found call the relevant function from BombItem.cs
+    }
+
     public void OnAttack(InputAction.CallbackContext context)
     {
         if(!cooldown)
